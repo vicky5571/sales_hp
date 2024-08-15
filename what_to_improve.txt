@@ -1,0 +1,5 @@
+1. When i edit sales, i am able to insert 2 quantity and 2 imei in one row sales
+    but when i add sales, i am forced to choose only 1 specific imei and its quantity will autamatically be 1
+
+user level 1 : vicky1 123
+user level 2 : vicky2 123

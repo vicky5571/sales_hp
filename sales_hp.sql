@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2024 at 06:46 PM
+-- Generation Time: Aug 15, 2024 at 04:54 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,7 +43,11 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 (4, 'Ipad'),
 (5, 'Tab Samsung A7'),
 (6, 'Realme X2 Pro'),
-(12, 'Iphone 11 64GB');
+(12, 'Iphone 11 64GB'),
+(13, 'Iphone XR'),
+(14, 'Nokia'),
+(15, 'Iphone 12'),
+(16, 'Redmi 14C');
 
 -- --------------------------------------------------------
 
@@ -67,12 +71,17 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_name`, `color`, `quantity`, `buy_price`, `srp`, `category_id`, `date`) VALUES
-(6, 'Redmi Note 9 Pro 6/64', 'Black', 2, 1000000.00, 1100000.00, 1, '2024-06-30'),
+(6, 'Redmi Note 9 Pro 6/64', 'Black', 3, 1000000.00, 1100000.00, 1, '2024-06-30'),
 (7, 'Samsung Galaxy', 'Black', 3, 1000000.00, 1100000.00, 2, '2024-06-30'),
-(8, 'Tab Samsung A7', 'Green', 0, 4000000.00, 4100000.00, 5, '2024-07-11'),
+(8, 'Tab Samsung A7', 'Green', 1, 4000000.00, 4100000.00, 5, '2024-07-11'),
 (9, 'Realme X2 Pro', 'Green', 2, 4000000.00, 4100000.00, 6, '2024-07-13'),
 (13, 'Ipad', 'Blue', 0, 1100000.00, 1200000.00, 4, '2024-07-14'),
-(14, 'Redmi Note 9 Pro 6/64', 'Blue', 1, 1100000.00, 1200000.00, 1, '2024-07-14');
+(14, 'Redmi Note 9 Pro 6/64', 'Blue', 1, 1100000.00, 1200000.00, 1, '2024-07-14'),
+(15, 'Iphone XR', 'Biru', 0, 4500000.00, 4600000.00, 13, '2024-07-15'),
+(16, 'Nokia', 'Black', 0, 2000000.00, 2500000.00, 14, '2024-07-15'),
+(17, 'Iphone 12', 'hitam', 1, 6000000.00, 6500000.00, 15, '2024-07-15'),
+(18, 'Redmi Note 9 Pro 6/64', 'hitam', 2, 6000000.00, 6500000.00, 1, '2024-07-08'),
+(19, 'Redmi 14C', 'hitam', 2, 6000000.00, 6500000.00, 16, '2024-07-11');
 
 -- --------------------------------------------------------
 
@@ -100,7 +109,8 @@ INSERT INTO `product_units` (`id`, `product_id`, `imei`) VALUES
 (21, 7, '557167'),
 (24, 6, '123874'),
 (25, 6, '812283'),
-(29, 14, ' 781923');
+(29, 14, ' 781923'),
+(34, 17, '311233');
 
 -- --------------------------------------------------------
 
@@ -136,7 +146,12 @@ INSERT INTO `sales` (`id`, `product_id`, `sale_price`, `quantity`, `total_price`
 (25, 6, 4000000.00, 1, 4000000.00, 3000000.00, '2024-07-14', ''),
 (26, 6, 1100000.00, 1, 1100000.00, 100000.00, '2024-07-14', ''),
 (28, 6, 4000000.00, 1, 4000000.00, 3000000.00, '2024-07-14', '768967'),
-(29, 14, 4000000.00, 1, 4000000.00, 2900000.00, '2024-07-14', '719268');
+(29, 14, 4000000.00, 1, 4000000.00, 2900000.00, '2024-07-14', '719268'),
+(30, 15, 4800000.00, 1, 4800000.00, 300000.00, '2024-07-15', '765112'),
+(31, 15, 7000000.00, 1, 7000000.00, 2500000.00, '2024-07-15', '9108283'),
+(32, 16, 2600000.00, 1, 2600000.00, 600000.00, '2024-07-15', '12345'),
+(33, 17, 7000000.00, 1, 7000000.00, 1000000.00, '2024-07-15', '2323878'),
+(34, 17, 7500000.00, 1, 7500000.00, 1500000.00, '2024-07-15', '453234');
 
 -- --------------------------------------------------------
 
@@ -206,25 +221,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `product_units`
 --
 ALTER TABLE `product_units`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `users`

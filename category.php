@@ -54,7 +54,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
         <div class="footer-container">
             <div class="footer">
-                <strong><p class="teks-footer">Copyright 2024 <a href="#">Kelompok 1 TI23A5</a> all rights reserved.</p></strong>
+                <strong><p class="teks-footer">Copyright 2024 <a href="#">Vicky Galih</a> all rights reserved.</p></strong>
             </div>
         </div>
     </div>
